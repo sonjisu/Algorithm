@@ -15,6 +15,7 @@ class Solution42579 {
 
 		// Value 내림차순으로 정렬
 		List<String> list = new ArrayList<>(hm.keySet());
+		//list.sort(Comparator.reverseOrder());
 		list.sort((o1, o2) -> hm.get(o2).compareTo(hm.get(o1)));
 
 		for (String s : list) {

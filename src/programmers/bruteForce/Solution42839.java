@@ -14,15 +14,15 @@ public class Solution42839 {
 		set = new HashSet<>();
 
 		for(int i=1; i<=len; i++) {
-			chs = new char[i];
-			perm(0, i, len, numbers);
+			chs = new char[i]; // char[1], char[2], char[3]
+			perm(0, i, len, numbers); // perm(0, 1, 전체 자릿수, 타겟), perm(0, 2, 전체 자릿수, 타겟), perm(0, 3, 전체 자릿수, 타겟)
 		}
 
 		return set.size();
 
 	}
 	public static void perm(int start, int r, int n, String numbers) {
-		if(start == r) {
+		if(start == r) { // 새로 넣은 숫자가 r과 같으면
 			// chs[0]이 0이면 안됨
 			if(chs[0] == '0')
 				return;
@@ -41,8 +41,8 @@ public class Solution42839 {
 				continue;
 
 			visited[i] = true;
-			chs[start] = numbers.charAt(i);
-			perm(start+1, r, n, numbers);
+			chs[start] = numbers.charAt(i);// 첫째수에 numbers의 숫자들 순회해서 넣기
+			perm(start+1, r, n, numbers); // start는 새로 넣은 숫자 카운팅
 			visited[i] = false;
 		}
 	}
@@ -55,7 +55,6 @@ public class Solution42839 {
 			if(num % i == 0)
 				return false;
 		}
-
 		return true;
 	}
 }
