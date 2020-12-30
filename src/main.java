@@ -1,15 +1,12 @@
-import programmers.bruteForce.Solution42839;
-import programmers.greedy.Solution42860;
-import programmers.heap.Solution42626;
-import programmers.heap.Solution42627;
-import programmers.heap.Solution42628;
+import programmers.greedy.Solution42885;
 
 public class main {
 	public static void main (String[] args) {
 
-		Solution42860 solution = new Solution42860();
-		String name = "JEROEN";
+		Solution42885 solution = new Solution42885();
+		int[] people = {70, 50, 80, 5};
+		int limit = 100;
 
-		System.out.println(solution.solution(name));
+		System.out.println(solution.solution(people, limit));
 	}
 }
